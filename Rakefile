@@ -3,10 +3,7 @@ $:.push File.expand_path('../lib/chef/handler', __FILE__)
 require 'bats_handler_version'
 require 'bundler/gem_tasks'
 
-
-desc "push .gem to rubygems.org"
-task :release do
-  system "gem push pkg/bats-chef-handler-#{Chef::Handler::BatsHandler::VERSION}.gem"
-end
+# common cmds:
+#   rake -T       : show all available tasks
 
 task :default => :build
