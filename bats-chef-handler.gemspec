@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.email = ['joeym@joeym.net']
   s.homepage = 'https://github.com/joemiller/bats-chef-handler'
   s.summary = 'BATS tests handler'
-  s.description = 'Run BATS tests at the end of a chef run'
+  s.description = 'Run BATS tests at the end of a chef run, similar to minitest-chef-handler'
   s.files = %w(LICENSE README.md) + Dir.glob('lib/**/*')
   s.require_paths = ['lib']
   s.add_development_dependency "chef", "> 10.14"
