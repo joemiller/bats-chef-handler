@@ -16,4 +16,5 @@ Gem::Specification.new do |s|
   s.files = %w(LICENSE README.md) + Dir.glob('lib/**/*')
   s.require_paths = ['lib']
   s.add_development_dependency "chef", "> 10.14"
+  s.license = 'MIT'
 end
