@@ -9,7 +9,7 @@ by [minitest-chef-handler](https://github.com/calavera/minitest-chef-handler)
 Requirements
 ============
 
-* Tested on Chef 10.14.x. May run on other versions (will test Chef 11 soon.)
+* Tested on Chef 10.14.x and 11.14.x.
 * Only tested with chef-solo thus far. I do not run chef-server or hosted chef.
 * Install [bats](https://github.com/sstephenson/bats). It should be in `$PATH` for the Chef run.
 
