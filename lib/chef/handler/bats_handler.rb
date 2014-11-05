@@ -1,3 +1,5 @@
+require 'chef/log'
+
 class Chef
   class Handler
     class BatsHandler < Chef::Handler
@@ -14,11 +16,11 @@ class Chef
 
         Dir.glob(test_file_paths).each do |test_path|
           Chef::Log.info "Running test: #{test_path}"
-          cmd = shell_out("bats #{test_path}", :live_stream => STDOUT)
+          cmd = shell_out("bats #{test_path}")
           if cmd.exitstatus == 0
-            Chef::Log.debug "#{test_path}: test passed"
+            Chef::Log.info "#{test_path}: test passed: #{cmd.stdout}"
           else
-            Chef::Log.debug "#{test_path}: test failed"
+            Chef::Log.error "#{test_path}: test failed: #{cmd.stdout}"
             test_failures << test_path
           end
         end
